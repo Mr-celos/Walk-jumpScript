@@ -1,0 +1,219 @@
+local ScreenGui = Instance.new("ScreenGui")
+local mainframe = Instance.new("Frame")
+local textlabel = Instance.new("TextLabel")
+local button = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local uicorner = Instance.new("UICorner")
+local uistroke = Instance.new("UIStroke")
+local values = Instance.new("IntValue")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+mainframe.Name = "mainframe"
+mainframe.Parent = ScreenGui
+mainframe.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+uicorner.Parent = mainframe
+uicorner.CornerRadius = UDim.new(0,20)
+uistroke.Parent = mainframe
+uistroke.Thickness = 2
+mainframe.Position = UDim2.new(0.056, 0,0.731, 0)
+mainframe.Size = UDim2.new(0.264, 0,0.2, 0)
+
+local MrcelosGUI = textlabel:Clone()
+MrcelosGUI.Name = "mrcelos GUI"
+MrcelosGUI.Parent = mainframe
+MrcelosGUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MrcelosGUI.Size = UDim2.new(1, 0,0.257, 0)
+local uistroke1 = uistroke:Clone()
+local uicorner1 = uicorner:Clone()
+uistroke1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uicorner1.CornerRadius = UDim.new(0,20)
+uistroke1.Thickness = 2
+uistroke1.Parent = MrcelosGUI
+uicorner1.Parent = MrcelosGUI
+MrcelosGUI.Font = Enum.Font.FredokaOne
+MrcelosGUI.Text = "Mr. Celos - WalkSpeed / Jump Power"
+MrcelosGUI.TextStrokeTransparency = 0
+MrcelosGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+MrcelosGUI.TextScaled = true
+MrcelosGUI.BackgroundTransparency = 0.75
+
+local Jumpplus = button:Clone()
+Jumpplus.Name = "jumpplus"
+Jumpplus.Parent = mainframe
+Jumpplus.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Jumpplus.Position = UDim2.new(0.847, 0,0.665, 0)
+Jumpplus.Size = UDim2.new(0.128, 0,0.305, 0)
+Jumpplus.Font = Enum.Font.SourceSansBold
+Jumpplus.Text = "+"
+local uicorner2 = uicorner:Clone()
+local uistroke2 = uistroke:Clone()
+uicorner2.Parent = Jumpplus
+uicorner2.CornerRadius = UDim.new(0,20)
+uistroke2.Parent = Jumpplus
+uistroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke2.Thickness = 2
+Jumpplus.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jumpplus.TextStrokeTransparency = 0
+Jumpplus.TextSize = 65
+Jumpplus.BackgroundTransparency = 0.75
+
+local jumpminus = button:Clone()
+jumpminus.Name = "jumpminus"
+jumpminus.Parent = mainframe
+jumpminus.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+jumpminus.Position = UDim2.new(0.025, 0,0.665, 0)
+jumpminus.Size = UDim2.new(0.128, 0,0.305, 0)
+jumpminus.Font = Enum.Font.SourceSansBold
+jumpminus.Text = "|"
+jumpminus.Rotation = 90
+jumpminus.TextYAlignment = Enum.TextYAlignment.Top
+jumpminus.Font = Enum.Font.FredokaOne
+local uicorner2 = uicorner:Clone()
+local uistroke2 = uistroke:Clone()
+uicorner2.Parent = jumpminus
+jumpminus.LineHeight = 1.18
+uicorner2.CornerRadius = UDim.new(0,20)
+uistroke2.Parent = jumpminus
+uistroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke2.Thickness = 2
+jumpminus.TextColor3 = Color3.fromRGB(255, 255, 255)
+jumpminus.TextStrokeTransparency = 0
+jumpminus.TextScaled = true
+jumpminus.BackgroundTransparency = 0.75
+
+local walkplus = button:Clone()
+walkplus.Name = "walkplus"
+walkplus.Parent = mainframe
+walkplus.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+walkplus.Position = UDim2.new(0.847, 0,0.3, 0)
+walkplus.Size = UDim2.new(0.128, 0,0.305, 0)
+walkplus.Font = Enum.Font.SourceSansBold
+walkplus.Text = "+"
+local uicorner2 = uicorner:Clone()
+local uistroke2 = uistroke:Clone()
+uicorner2.Parent = walkplus
+uicorner2.CornerRadius = UDim.new(0,20)
+uistroke2.Parent = walkplus
+uistroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke2.Thickness = 2
+walkplus.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkplus.TextStrokeTransparency = 0
+walkplus.TextSize = 65
+walkplus.BackgroundTransparency = 0.75
+
+local walkminus = button:Clone()
+walkminus.Name = "walkminus"
+walkminus.Parent = mainframe
+walkminus.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+walkminus.Position = UDim2.new(0.025, 0,0.3, 0)
+walkminus.Size = UDim2.new(0.128, 0,0.305, 0)
+walkminus.Font = Enum.Font.SourceSansBold
+walkminus.Text = "|"
+walkminus.Rotation = 90
+walkminus.TextYAlignment = Enum.TextYAlignment.Top
+walkminus.Font = Enum.Font.FredokaOne
+local uicorner2 = uicorner:Clone()
+local uistroke2 = uistroke:Clone()
+uicorner2.Parent = walkminus
+walkminus.LineHeight = 1.18
+uicorner2.CornerRadius = UDim.new(0,20)
+uistroke2.Parent = walkminus
+uistroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke2.Thickness = 2
+walkminus.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkminus.TextStrokeTransparency = 0
+walkminus.TextScaled = true
+walkminus.BackgroundTransparency = 0.75
+
+local walk = textlabel:Clone()
+walk.Name = "walk"
+walk.Parent = mainframe
+walk.Position = UDim2.new(0.192, 0,0.3, 0)
+walk.Size = UDim2.new(0, 224,0, 46)
+local uicorner3 = uicorner:Clone()
+local uistroke3 = uistroke:Clone()
+uicorner3.Parent = walk
+uicorner3.CornerRadius = UDim.new(0,20)
+uistroke3.Parent = walk
+uistroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke3.Thickness = 2
+walk.TextScaled = true
+walk.Font = Enum.Font.FredokaOne
+walk.Text = "Walkspeed = 16"
+walk.TextColor3 = Color3.fromRGB(255, 255, 255)
+walk.TextStrokeTransparency = 0
+walk.BackgroundTransparency = 0.75
+walk.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+local jump = walk:Clone()
+local uicorner4 = uicorner:Clone()
+local uistroke4 = uistroke:Clone()
+uicorner4.Parent = jump
+uicorner4.CornerRadius = UDim.new(0,20)
+uistroke4.Parent = jump
+jump.Font = Enum.Font.FredokaOne
+uistroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uistroke4.Thickness = 2
+jump.Parent = mainframe
+jump.Position = UDim2.new(0.192, 0,0.659, 0)
+jump.Name = "jump"
+jump.Text = "Jump Power = 50"
+
+local jumpvalu = values:Clone()
+jumpvalu.Parent = jump
+jumpvalu.Value = 50
+
+local walkvalu = values:Clone()
+walkvalu.Parent = walk
+walkvalu.Value = 16
+
+
+jumpvalu.Changed:Connect(function()
+	jump.Text = "Jump Power = "..jumpvalu.Value
+	game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = jumpvalu.Value
+end)
+
+walkvalu.Changed:Connect(function()
+	walk.Text = "Jump Power = "..walkvalu.Value
+	game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = walkvalu.Value
+end)
+
+
+Jumpplus.MouseButton1Click:Connect(function()
+	print("+1 jump")
+	jumpvalu.Value += 1
+end)
+
+walkplus.MouseButton1Click:Connect(function()
+	print("+1 walk")
+	walkvalu.Value += 1
+end)
+
+jumpminus.MouseButton1Click:Connect(function()
+	if jumpvalu.Value ~= 1 then
+		print("-1 jump")
+		jumpvalu.Value -= 1
+	end
+end)
+
+walkminus.MouseButton1Click:Connect(function()
+	if walkvalu.Value ~= 1 then
+		print("-1 walk")
+		walkvalu.Value -= 1
+	end
+end)
+
+
+
+local function JETILC_fake_script() -- mainframe.LocalScript
+	local script = Instance.new('LocalScript', mainframe)
+
+	script.parent.Selectable = true
+	script.Parent.Active = true
+	script.parent.Draggable = true
+
+end
+coroutine.wrap(JETILC_fake_script)()
